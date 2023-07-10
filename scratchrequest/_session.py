@@ -37,6 +37,12 @@ class Session:
         try:
             self.xtoken = account["user"]["token"]
             self.headers["X-Token"] = self.xtoken
+            self.all_login_data = account
+            self.id = account['user']['id']
+            self.username = account['user']['username']
+            self.banned = account['user']['banned']
+            self.email = account['user']['email']
+            self.new_scratcher = account['permissions']['new_scratcher']
         except KeyError:
             raise LoginError("Your login data was wrong. Check if you spelled your credits correctly, or if you are in replit, see the docs for more information.")
 
