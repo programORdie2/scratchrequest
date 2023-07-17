@@ -1,6 +1,7 @@
 import warnings
 from ._exceptions import LoginError
 from . import _cloud
+from . import _project
 import requests, json, re
 
 headers = {
@@ -43,9 +44,15 @@ class Session:
             self.banned = account['user']['banned']
             self.email = account['user']['email']
             self.new_scratcher = account['permissions']['new_scratcher']
+            self.get_csrf_token()
         except KeyError:
             raise LoginError("Your login data was wrong. Check if you spelled your credits correctly, or if you are in replit, see the docs for more information.")
 
+    def get_csrf_token(self):
+        headers = {"x-requested-with": "XMLHttpRequest", "Cookie": "scratchlanguage=en;permissions=%7B%7D;", "referer": "https://scratch.mit.edu"}
+        request = requests.get("https://scratch.mit.edu/csrf_token/", headers=headers)
+        self.csrf_token = re.search("scratchcsrftoken=(.*?);", request.headers["Set-Cookie"]).group(1)
+        
     @classmethod
     def login(cls, username : str, password : str):
         '''
@@ -76,3 +83,9 @@ class Session:
         Create a cloud connection to a project.
         '''
         return _cloud.CreateCloudConnection(project_id=project_id, session=self, **kwargs)
+
+    def ConnectProject(self, id : int) -> _project.CreateConnectProject:
+        '''
+        Create a connection to a project.
+        '''
+        return _project.CreateConnectProject(id=id, session=self)
