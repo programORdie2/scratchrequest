@@ -18,3 +18,6 @@ class DownloadError(Exception):
 
 class ProjectNotFound(Exception):
     pass
+
+class ProjectError(Exception):
+    pass

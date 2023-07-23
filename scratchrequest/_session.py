@@ -2,6 +2,7 @@ import warnings
 from ._exceptions import LoginError
 from . import _cloud
 from . import _project
+from . import _settings
 import requests, json, re
 
 headers = {
@@ -89,3 +90,9 @@ class Session:
         Create a connection to a project.
         '''
         return _project.CreateConnectProject(id=id, session=self)
+
+    def ManageSettings(self) -> _settings.ManageSettings:
+        '''
+        Makes it possible to edit your settings.
+        '''
+        return _settings.ManageSettings(session=self)
