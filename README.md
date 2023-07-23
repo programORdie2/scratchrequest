@@ -49,3 +49,15 @@ session = scratchrequest.Session("Your_SessionID", username="Your_Username")
 ```
 
 It will give an error if the `username` or `sessionID` is invalid or outdated.
+
+# Managing user settings
+
+With scratchrequest, you can easy edit some settings of your scratchaccount. The following program shows how.
+
+```python
+import scratchrequest
+
+session = scratchrequest.Login(username="Your_Username", password="Your_Password")
+
+Here i need to add some stuff, but i'm to lazy ...
+```
