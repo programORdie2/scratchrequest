@@ -3,7 +3,7 @@
 
 **For most of the features you need a [Scratch](https://scratch.mit.edu/) account. You can signup for free at [https://scratch.mit.edu/](https://scratch.mit.edu/).**
 
-## Installation
+# Installation
 
 To install this library, just type ```pip install scratchrequest``` in the terminal (Command Prompt)
 
@@ -20,7 +20,7 @@ os.system('pip install scratchrequest')
 **If you still have troubles while installing then go
 to [this link](https://packaging.python.org/tutorials/installing-packages/)**
 
-## Logging in
+# Logging in
 
 *Login with username and password:*
 
@@ -58,6 +58,27 @@ With scratchrequest, you can easy edit some settings of your scratchaccount. The
 import scratchrequest
 
 session = scratchrequest.Login(username="Your_Username", password="Your_Password")
+settings = session.ManageSettings()
 
 Here i need to add some stuff, but i'm to lazy ...
 ```
+
+# Connecting To Projects
+
+You can easy get projectstats, and edit the settings.
+To connect, use:
+
+```python
+import scratchrequest
+
+session = scratchrequest.Login(username="Your_Username", password="Your_Password")
+projects = session.ConnectProject(id=ProjectID)
+```
+**Or without session (Some features won't work!):**
+```python
+import scratchrequest
+
+project = scratchrequest.get_project(id=ProjectID)
+```
+
+# Getting project stats:
