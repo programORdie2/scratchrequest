@@ -87,4 +87,18 @@ import scratchrequest
 project = scratchrequest.get_project(id=ProjectID)
 ```
 
-# Getting project stats:
+## Getting project data:
+
+```python
+
+project.id #Gets the project ID
+project.title         #Gets the title of the project.
+project.author        #Gets the creator of the project.
+project.views         #Gets the views of the project.
+project.loves         #Gets the loves of the project
+project.favorites     #Gets the favorites of the project.
+project.remixes       #Gets the remixcount of a project.
+project.remix         #Gets the remixroot of the project.
+project.description   #Gets the description tab of the project.
+project.instructions  #Gets the instructions tab of the project.
+```
