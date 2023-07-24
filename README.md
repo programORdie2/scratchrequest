@@ -1,4 +1,4 @@
-# scratchrequest
+t# scratchrequest
  _A package for communicating with scratch.mit.edu's cloud variables, getting/setting userdata, projects and studios!_
 
 **For most of the features you need a [Scratch](https://scratch.mit.edu/) account. You can signup for free at [https://scratch.mit.edu/](https://scratch.mit.edu/).**
@@ -59,6 +59,11 @@ import scratchrequest
 
 session = scratchrequest.Login(username="Your_Username", password="Your_Password")
 settings = session.ManageSettings()
+
+#Examples:
+settings.check_password('Password') #Controls of the given password is correct
+settings.change_country('Belgium') #Sets the country
+settings.change_password(old_password='old password', new_passwod='new password')
 
 Here i need to add some stuff, but i'm to lazy ...
 ```
