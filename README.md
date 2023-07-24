@@ -64,8 +64,9 @@ settings = session.ManageSettings()
 settings.check_password('Password') #Controls of the given password is correct
 settings.change_country('Belgium') #Sets the country
 settings.change_password(old_password='old password', new_passwod='new password')
+settings.change_email('mail@example.com', password='password')
 
-Here i need to add some stuff, but i'm to lazy ...
+#Note: some of these features don't work always!
 ```
 
 # Connecting To Projects
