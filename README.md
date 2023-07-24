@@ -91,14 +91,19 @@ project = scratchrequest.get_project(id=ProjectID)
 
 ```python
 
-project.id #Gets the project ID
-project.title         #Gets the title of the project.
-project.author        #Gets the creator of the project.
-project.views         #Gets the views of the project.
-project.loves         #Gets the loves of the project
-project.favorites     #Gets the favorites of the project.
-project.remixes       #Gets the remixcount of a project.
-project.remix         #Gets the remixroot of the project.
-project.description   #Gets the description tab of the project.
-project.instructions  #Gets the instructions tab of the project.
+project.id                 #Gets the project ID
+project.title              #Gets the title of the project.
+project.author             #Gets the creator of the project.
+project.views              #Gets the views of the project.
+project.loves              #Gets the loves of the project
+project.favorites          #Gets the favorites of the project.
+project.remixes            #Gets the remixcount of a project.
+project.remix              #Gets the remixroot of the project.
+project.description        #Gets the description tab of the project.
+project.instructions       #Gets the instructions tab of the project.
+project.thumnail_url       #Gets the url of the thumnail of the project.
+project.comments_allowed   #Returns of the project allowes commening.
+project.created            #Returns the date of project creation.
+project.shared             #Returns the date of project sharing.
+project.modified           #Returns the date of last modifications.
 ```
