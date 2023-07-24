@@ -1,4 +1,4 @@
-t# scratchrequest
+# scratchrequest
  _A package for communicating with scratch.mit.edu's cloud variables, getting/setting userdata, projects and studios!_
 
 **For most of the features you need a [Scratch](https://scratch.mit.edu/) account. You can signup for free at [https://scratch.mit.edu/](https://scratch.mit.edu/).**
