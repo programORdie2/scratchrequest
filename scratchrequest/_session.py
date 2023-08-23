@@ -1,4 +1,3 @@
-import warnings
 from ._exceptions import LoginError
 from . import _cloud
 from . import _project
