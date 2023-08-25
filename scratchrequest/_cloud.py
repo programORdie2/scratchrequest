@@ -1,3 +1,7 @@
+# By TheCommCraft
+
+
+
 from typing import Literal, Union
 from ._exceptions import QuickAccessDisabledError
 from websocket import WebSocket
